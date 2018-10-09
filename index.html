@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./src/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-9 col-12 mx-auto bg-light pl-5 pr-5">
+                <div class="row m-3">
+                    <textarea class="form-control" id="comment" rows="5" placeholder="Ingresa un comentario"></textarea>
+                    <button type="button" onclick="addComment()" class="btn float-right btn-info m-2">Agregar comentario</button>
+                </div>
+                <div class="m-3">
+                    <div class="col">
+                        <h2>Comentarios</h2>
+
+                        <div id="comments">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyADf3rP9B45UDTdWQCe5NtFZWyIE788mRI",
+        authDomain: "comentarios-s-v.firebaseapp.com",
+        databaseURL: "https://comentarios-s-v.firebaseio.com",
+        projectId: "comentarios-s-v",
+        storageBucket: "comentarios-s-v.appspot.com",
+        messagingSenderId: "946251637831"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="./src/model/firebase.js"></script>
+<script src="./src/controler/comments.js"></script>
+<script src="./src/view/comments.js"></script>
+
+
+</html>
